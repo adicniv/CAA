@@ -12,7 +12,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Name_To_Case($param){  
+    function array_change_key_case($param){  
         //array_change_key_case($array);
         $input_array = array("FirSt" => 1, "SecOnd" => 4);
         print_r(array_change_key_case($input_array, CASE_UPPER));
@@ -24,7 +24,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function FenGe($param){       
+    function array_chunk($param){       
         //array_chunk($array, $size);
         $input_array = array('a', 'b', 'c', 'd', 'e');
         print_r(array_chunk($input_array, 2));
@@ -37,7 +37,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Return_Column($param){        
+    function array_column($param){        
         //array_column($input, $column_key);
         $records = array(
             array(
@@ -72,7 +72,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Create_Array($param){        
+    function array_combine($param){        
         //array_combine($keys, $values);
         $a = array('green', 'red', 'yellow');
         $b = array('avocado', 'apple', 'banana');
@@ -87,7 +87,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Statistics($param){        
+    function array_count_values($param){        
         //array_count_values($array);
         $array = array(1, "hello", 1, "world", "hello");
         print_r(array_count_values($array));
@@ -99,7 +99,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function  Sets_Difference($param){        
+    function  array_diff_assoc($param){        
         //array_diff_assoc($array1, $array2);
         $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
         $array2 = array("a" => "green", "yellow", "red");
@@ -113,7 +113,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Key_Difference($param) {        
+    function array_diff_key($param) {        
         //array_diff_key($array1, $array2);
         $array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
         $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
@@ -127,7 +127,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Uassoc_Difference($param) {
+    function array_diff_uassoc($param) {
         //array_diff_uassoc($array1, $array2, $key_compare_func);
         function key_compare_func($a, $b)
         {
@@ -148,7 +148,7 @@ class Array_Function {
      * Computes the difference of arrays using a callback function on the keys for comparison
      * @return number|string
      */
-    function Ukey_Difference(){
+    function array_diff_ukey(){
         //array_diff_ukey($array1, $array2, $key_compare_func);
         function key_compare_func($key1, $key2)
         {
@@ -172,7 +172,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function General_Difference($param) {
+    function array_diff($param) {
         //array_diff($array1, $array2);
         $array1 = array("a" => "green", "red", "blue", "red");
         $array2 = array("b" => "green", "yellow", "red");
@@ -188,7 +188,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Fill_Keys($param) {        
+    function array_fill_keys($param) {        
         //array_fill_keys($keys, $value); 
         $keys = array('foo', 5, 10, 'bar');
         $a = array_fill_keys($keys, 'banana');
@@ -201,7 +201,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Fill_General($param) {        
+    function array_fill($param) {        
         //array_fill($start_index, $num, $value);
         $a = array_fill(5, 6, 'banana');
         $b = array_fill(-2, 4, 'pear');
@@ -215,7 +215,7 @@ class Array_Function {
      * @param unknown $param
      * @return boolean|string
      */
-    function Filter($param) {        
+    function array_filter($param) {        
         //array_filter($array);
         function odd($var)
         {
@@ -244,7 +244,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Flip($param) {        
+    function array_flip($param) {        
         //array_flip($array); 
         $input = array("oranges", "apples", "pears");
         $flipped = array_flip($input);
@@ -258,7 +258,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Intersect_assoc($param) {        
+    function array_intersect_assoc($param) {        
         //array_intersect_assoc($array1, $array2);
         $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
         $array2 = array("a" => "green", "b" => "yellow", "blue", "red");
@@ -272,7 +272,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Intersect_Key($param) {        
+    function array_intersect_key($param) {        
         //array_intersect_key($array1, $array2);
         $array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
         $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
@@ -286,7 +286,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Intersect_Uassoc($param) {        
+    function array_diff_uassoc($param) {        
         //array_diff_uassoc($array1, $array2, $key_compare_func);
         $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
         $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
@@ -300,7 +300,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Intersect_ukey($param) {        
+    function array_intersect_ukey($param) {        
         //array_intersect_ukey($array1, $array2, $key_compare_func); 
         function key_compare_func($key1, $key2)
         {
@@ -324,7 +324,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Intersect($param) {     
+    function array_intersect($param) {     
         //array_intersect($array1, $array2);  
         $array1 = array("a" => "green", "red", "blue");
         $array2 = array("b" => "green", "yellow", "red");
@@ -338,7 +338,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Key_Exists($param) {        
+    function array_key_exists($param) {        
         //array_key_exists($key, $array);
         return "";
         
@@ -349,7 +349,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function First_Key($param) {        
+    function array_key_first($param) {        
         //array_key_first();
         $array = ['a' => 1, 'b' => 2, 'c' => 3];
         
@@ -364,7 +364,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Key_Last($param) {        
+    function array_key_last($param) {        
         //array_key_last();        
         return "";
     }    
@@ -374,7 +374,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Key_Name($param) {        
+    function array_keys($param) {        
         //array_keys($array);
         $array = array(0 => 100, "color" => "red");
         print_r(array_keys($array));
@@ -393,7 +393,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Map($param) {        
+    function array_map($param) {        
         //array_map($callback, $array1);
         function cube($n)
         {
@@ -411,7 +411,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Merge_Recursive($param) {        
+    function array_merge_recursive($param) {        
         //array_merge_recursive($array1);
         $ar1 = array("color" => array("favorite" => "red"), 5);
         $ar2 = array(10, "color" => array("favorite" => "green", "blue"));
@@ -425,7 +425,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Merge($param) {        
+    function array_merge($param) {        
         //array_merge($array1);
         $array1 = array("color" => "red", 2, 4);
         $array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
@@ -439,7 +439,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Multi_Sort($param) {        
+    function array_multisort($param) {        
         //array_multisort($array1);
         $ar1 = array(10, 100, 100, 0);
         $ar2 = array(1, 3, 2, 4);
@@ -455,7 +455,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Pad($param) {        
+    function array_pop($param) {        
         //array_pop($array);
         $input = array(12, 10, 9);
         
@@ -475,7 +475,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Pop($param) {        
+    function array_pop($param) {        
         //array_pop($array);
         $stack = array("orange", "banana", "apple", "raspberry");
         $fruit = array_pop($stack);
@@ -488,7 +488,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Product($param) {        
+    function array_product($param) {        
         //array_product($array);
         $a = array(2, 4, 6, 8);
         echo "product(a) = " . array_product($a) . "\n";
@@ -501,7 +501,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Push($param) {        
+    function array_push($param) {        
         //array_product($array);
         $stack = array("orange", "banana");
         array_push($stack, "apple", "raspberry");
@@ -514,7 +514,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Rand($param) {        
+    function array_rand($param) {        
         //array_rand($array);
         $input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
         $rand_keys = array_rand($input, 2);
@@ -528,7 +528,7 @@ class Array_Function {
      * @param unknown $param
      * @return unknown|string
      */
-    function reduce($param) {        
+    function array_reduce($param) {        
         //array_reduce($array, $callback);
         function sum($carry, $item)
         {
@@ -556,7 +556,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Replace_Recursive($param) {        
+    function array_replace_recursive($param) {        
         //array_replace_recursive($array1, $array2);
         $base = array('citrus' => array( "orange") , 'berries' => array("blackberry", "raspberry"), );
         $replacements = array('citrus' => array('pineapple'), 'berries' => array('blueberry'));
@@ -574,7 +574,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Replace($param) {        
+    function array_replace($param) {        
         //array_replace($array1, $array2);
         $base = array("orange", "banana", "apple", "raspberry");
         $replacements = array(0 => "pineapple", 4 => "cherry");
@@ -590,7 +590,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Reverse($param) {        
+    function array_reverse($param) {        
         //array_reverse($array);
         $input  = array("php", 4.0, array("green", "red"));
         $reversed = array_reverse($input);
@@ -607,7 +607,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Search($param) {        
+    function array_search($param) {        
         //array_search($needle, $haystack);
         $array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
         
@@ -621,7 +621,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Shift($param) {        
+    function array_shift($param) {        
         //array_shif();
         $stack = array("orange", "banana", "apple", "raspberry");
         $fruit = array_shift($stack);
@@ -634,7 +634,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Slice($param) {        
+    function array_slice($param) {        
         //array_slice($array, $offset);
         $input = array("a", "b", "c", "d", "e");
         
@@ -653,7 +653,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Splice($param) {       
+     function array_splice($param) {       
         //array_splice($input, $offset);
         $input = array("red", "green", "blue", "yellow");
         array_splice($input, 2);
@@ -684,7 +684,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Sum($param) {       
+    function array_sum($param) {       
         //array_sum();
         $a = array(2, 4, 6, 8);
         echo "sum(a) = " . array_sum($a) . "\n";
@@ -699,7 +699,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Udiff_Assoc($param) {        
+    function array_udiff_assoc($param) {        
         //array_udiff_assoc($array1, $array2, $value_compare_func);
         class cr {
             private $priv_member;
@@ -728,7 +728,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Udiff_Uassoc($param) {        
+    function array_diff_uassoc($param) {        
         //array_diff_uassoc($array1, $array2, $key_compare_func);
         class cr {
             private $priv_member;
@@ -762,7 +762,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function udiff($param) {        
+    function print_r($param) {        
         //array_udiff($array1, $array2, $value_compare_func);
         // Arrays to compare
         $array1 = array(new stdclass, new stdclass,
@@ -804,7 +804,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Uintersect_Assoc($param) {        
+    function array_uintersect_assoc($param) {        
         //array_uintersect_assoc($array1, $array2, $value_compare_func);
         $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
         $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
@@ -818,7 +818,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Uintersect_Uassoc($param) {        
+    function array_uintersect_uassoc($param) {        
         //array_uintersect_uassoc($array1, $array2, $value_compare_func, $key_compare_func);
         $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
         $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
@@ -832,7 +832,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Uintersect($param) {        
+    function array_uintersect($param) {        
         //array_uintersect($array1, $array2, $value_compare_func);
         $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
         $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
@@ -846,7 +846,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Unique($param) {       
+    function array_unique($param) {       
         //array_unique($array);
         $input = array("a" => "green", "red", "b" => "green", "blue", "red");
         $result = array_unique($input);
@@ -859,7 +859,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Unshif($param) {        
+    function array_unshift($param) {        
         //array_unshift($array, $value1);
         $queue = array("orange", "banana");
         array_unshift($queue, "apple", "raspberry");
@@ -872,7 +872,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Values($param) {        
+    function array_values($param) {        
         //array_values($array);
         $array = array("size" => "XL", "color" => "gold");
         print_r(array_values($array));
@@ -884,7 +884,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Walk_Recursive($param) {
+    function array_walk_recursive($param) {
         //array_walk_recursive($array, $callback);
         $sweet = array('a' => 'apple', 'b' => 'banana');
         $fruits = array('sweet' => $sweet, 'sour' => 'lemon');
@@ -903,7 +903,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Walk($param) {
+    function array_walk($param) {
         //array_walk($array, $callback);
         $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
         
@@ -932,7 +932,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Array($param) {
+    function array($param) {
         //array();
         $fruits = array (
             "fruits"  => array("a" => "orange", "b" => "banana", "c" => "apple"),
@@ -947,7 +947,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Arsort($param) {
+    function arsort($param) {
         //arsort($array);
         $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
         arsort($fruits);
@@ -961,7 +961,7 @@ class Array_Function {
      * Sort an array and maintain index association
      * @return string
      */
-    function Asort(){
+    function asort(){
         //asort();
         $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
         asort($fruits);
@@ -976,7 +976,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Compact($param) {
+    function compact($param) {
         //compact($array);
         $city  = "San Francisco";
         $state = "CA";
@@ -994,7 +994,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Count($param) {
+    function count($param) {
         //count($array_or_countable);
         $a[0] = 1;
         $a[1] = 3;
@@ -1017,7 +1017,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Current($param) {
+    function current($param) {
         //current($array);
         $transport = array('foot', 'bike', 'car', 'plane');
         $mode = current($transport); // $mode = 'foot';
@@ -1039,7 +1039,7 @@ class Array_Function {
      * Return the current key and value pair from an array and advance the array cursor
      * @return string
      */
-    function Each(){
+    function each(){
         //each($array);
         $foo = array("bob", "fred", "jussi", "jouni", "egon", "marliese");
         $bar = each($foo);
@@ -1052,7 +1052,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function End($param) {
+    function end($param) {
         //end($array);
         $fruits = array('apple', 'banana', 'cranberry');
         echo end($fruits); // cranberry
@@ -1083,7 +1083,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function In_Array($param) {
+    function in_array($param) {
         //in_array($needle, $haystack);
         $os = array("Mac", "NT", "Irix", "Linux");
         if (in_array("Irix", $os)) {
@@ -1100,7 +1100,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Alias_Key_Exists($param) {
+    function key_exists($param) {
         //key_exists($key, $search);
         return "";
     }
@@ -1110,7 +1110,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Key($param) {
+    function key($param) {
         //key($array);
         $array = array(
             'fruit1' => 'apple',
@@ -1135,7 +1135,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Krsort($param) {
+    function krsort($param) {
         //krsort($array);
         $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
         krsort($fruits);
@@ -1150,7 +1150,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Ksort($param) {
+    function ksort($param) {
         //ksort($array);
         $fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
         ksort($fruits);
@@ -1165,7 +1165,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function List($param) {
+    function list($param) {
         //list()="";
         $info = array('coffee', 'brown', 'caffeine');
         
@@ -1192,7 +1192,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Natcasesort($param) {
+    function natcasesort($param) {
         //natcasesort($array);
         $array1 = $array2 = array('IMG0.png', 'img12.png', 'img10.png', 'img2.png', 'img1.png', 'IMG3.png');
         
@@ -1211,7 +1211,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function NatSort($param) {
+    function natsort($param) {
         //natsort($array);
         $array1 = $array2 = array("img12.png", "img10.png", "img2.png", "img1.png");
         
@@ -1230,8 +1230,8 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Next($param) {
-        //Next($array);
+    function next($param) {
+        //next($array);
         $transport = array('foot', 'bike', 'car', 'plane');
         $mode = current($transport); // $mode = 'foot';
         $mode = next($transport);    // $mode = 'bike';
@@ -1246,7 +1246,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Alias_Pos($param) {
+    function pos($param) {
         //pos($arg);
         return "";
     }
@@ -1256,7 +1256,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Prev($param) {
+    function prev($param) {
         //prev();
         $transport = array('foot', 'bike', 'car', 'plane');
         $mode = current($transport); // $mode = 'foot';
@@ -1272,7 +1272,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Range($param) {
+    function range($param) {
         //range($start, $end);
         // array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
         foreach (range(0, 12) as $number) {
@@ -1302,7 +1302,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Reset($param) {
+    function reset($param) {
         //reset($array);
         $array = array('step one', 'step two', 'step three', 'step four');
         
@@ -1325,7 +1325,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Rsort($param) {
+    function rsort($param) {
         //rsort($array);
         $fruits = array("lemon", "orange", "banana", "apple");
         rsort($fruits);
@@ -1340,7 +1340,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Shuffle($param) {
+    function shuffle($param) {
         //shuffle($array);
         $numbers = range(1, 20);
         shuffle($numbers);
@@ -1355,7 +1355,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Alias_SizeOf($param) {
+    function sizeof($param) {
         //sizeof($var);
         $fruits = array("lemon", "orange", "banana", "apple");
         sort($fruits);
@@ -1370,7 +1370,7 @@ class Array_Function {
      * @param unknown $param
      * @return string
      */
-    function Sort($param) {
+    function sort($param) {
         //sort();
         $fruits = array("lemon", "orange", "banana", "apple");
         sort($fruits);
@@ -1385,7 +1385,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Uasort($param) {
+    function uasort($param) {
         //uasort($array, $value_compare_func);
         // Comparison function
         function cmp($a, $b) {
@@ -1410,7 +1410,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Uksort($param) {
+    function uksort($param) {
         //uksort($array, $key_compare_func);
         function cmp($a, $b)
         {
@@ -1435,7 +1435,7 @@ class Array_Function {
      * @param unknown $param
      * @return number|string
      */
-    function Usort($param) {
+    function usort($param) {
         //usort($array, $value_compare_func);
         function cmp($a, $b)
         {

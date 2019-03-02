@@ -14,6 +14,7 @@ Class MySQLi{
     function mysqli_affected_rows($param) {
         $mysqli::affected_rows;
         return "";
+        mysqli_a()
     }
     /**
      *返回 Mysql 客户端版本信息，类型为 string
@@ -22,7 +23,7 @@ Class MySQLi{
      * @return string
      */
     function mysqli_get_client_info($param) {
-        $mysqli::client_info;
+        $mysqli::client_info;mysqli_get_c
         return "";
     }
     /**
@@ -32,7 +33,7 @@ Class MySQLi{
      * @return string
      */
     function mysqli_get_client_version($param) {
-        $mysqli::client_version;
+        $mysqli::client_version;mysqli_get_client_version
         return "";
     }
     /**
