@@ -1,0 +1,379 @@
+as well as NDB Cluster releases 
+based on version 8.0 of NDB through 8.0.16-ndb-8.0.16
+respectively
+include documentation of features of MySQL versions 
+that have not yet been released. 
+in every edition of MySQL 8.0
+licensed to you
+refer to your MySQL 8.0 license agreement
+sales representative
+with other MySQL users
+Document generated on: 2019-03-28 (revision: 61489)
+*************************************
+version8.0,through release 8.0.17
+in the present text with reference to release number(8.0.x)
+is not intended for use with older versions
+software releases
+include third-party software
+used under license
+see for licensing information
+Commercial release
+community release
+are provided under a license agreement
+containing restrictions on use and disclosure 
+and are protected by intellectual property laws
+expressly permitted in your license agreement or allowed by law
+may not use, copy, reproduce,translate,broadcast,modify,license,transmit,distribute,exhibit,perform,publish,or dispay any part, in any form, or by any means.
+reverse engineering
+disassembly
+decompilation
+required for interoperability
+is prohibited
+contained herein
+is subject to (is subjucted to)
+change without notice
+is not warranted to be error-free
+report us 
+in writing
+is delivered to 
+licensing it on behalf of the U.S. Government
+following notice is applicable
+Federal Acquisition Regulation
+including any operating system, integrated sofware, 
+any programsinstalled on the hardware, 
+and/or documentation
+delivered to U.S.Government end users
+are pursuant to the applicable Federal Acquisition Regulation
+agency-specific supplemental regulations
+As such
+license restrictions
+applicable to the programs
+No other rights are granted to the U.S. Government
+in a variety of information management applications
+inherently
+a risk of personal injury
+fail-safe(fail-fast)
+shall be responsible to
+take all appropriate fail-safe
+redundanc
+ensure its safe use
+Oracle Corporation and its affiliates 
+disclaim for
+their respective owners
+SPARC（Scalable Processor ARChitecture）
+AMD(Advanced Micro Devices)
+access(Microsoft Office Access)
+access to
+access to or information
+with respect to(regarding / concerning something)
+any kind with respect to third-party content
+set forth in
+unless otherwise set forth in an applicable agreement
+will not be responsible for
+incurred due to your access to or use of 
+printed for
+printed solely for your own personal use
+is allowed as long as
+ is not altered or edited 
+except if 
+similar to how Oracle disseminates it
+similar to
+disseminates 
+an authorized representative of Oracle.
+reserve any and all rights to this documentation
+not expressly granted above
+Documentation Accessibility
+For information about Oracle's commitment to accessibility,
+if you are hearing impaired.
+*************************************
+General Information
+Table of Contents  
+delivers 
+very fast, 
+multithreaded, 
+multi-user, 
+and robust 
+SQL (Structured Query Language) 
+mission-critical, 
+heavy-load
+embedding
+mass-deployed
+without Oracle's express written authorization
+express written authorization
+Dual Licensed
+particular interest
+installation instructions
+Chapter
+Section
+information about
+answers to
+concerning
+Appendix A
+bug fixes
+sensitive security bug
+report to 
+*************************
+how to obtain and install 
+a summary of the procedure
+follows
+later sections provide the details
+rather than
+about upgrade procedures
+and about issues
+you should consider 
+answers to some common questions concerning migration issues
+equally suitable for 
+is known to run
+in several distribution formats
+pre-packaged distributions
+source code
+provides access to 
+To verify the integrity of the distribution
+how to secure the initial MySQL root user account
+applies
+benchmark
+a generic binary
+entirely
+help on
+a generic binary
+notes on
+Linux
+AIX
+FreeBSD
+OS X Launch Daemon
+MySQL Preference Pane
+*********************
+provides to 
+a tutorial introduction
+use the mysql client program to
+referred to as 
+terminal monitor
+used in
+batch mode
+beforehand
+covered
+invoke
+a list of options
+If this is not true
+to which you can connect
+consult the relevant portions of this manual,
+consult
+relevant
+entire
+skip
+in nature
+omitted
+consult for
+on the topics
+covered here
+*****************************************
+a brief overview 
+is similar for all of them 
+for all of them
+particularly 
+multiple servers on a single machine
+************
+consider
+a wide range of  possible topics
+factors
+grnting to
+not granting unnecessary privileges to users
+SQL injections
+data corruption
+data files
+log files
+the all application files of your installation
+parties
+including the users and databases 
+granted with in use within the database
+granted with access to the databases, views and stored programs in use within the database.
+wish to
+restrict MySQL
+only loclally on the MySQL server host, or to a limited set of other hosts,
+adequate and appropriate backups
+of your database files, configuration and log files.
+Also be sure
+in place
+**********************
+be up
+such as 
+by mistake
+essential
+to transfer a MySQL installation to another system or to set up replication slave servers
+as a safeguard
+strategies
+suit for your installation
+with which you should be familiar
+versus
+full
+incremental
+and so forth
+point-in-time
+compression
+corrupt tables
+dedicated to back up issues 
+mysqldump 
+here is given
+identical data on multiple server
+benefits
+enabling client query load to be distributed over servers,
+with no impact
+collection of products that work together to provide a high availability solution
+A group of MySQL servers can be configured to be cluster using MySQL Shell.
+secondary servers 
+replicas
+required
+via MySQL Router
+promoted to the role of primary,
+routes requests to the new primary.
+
+high-availability
+high-redundancy
+how to performance 
+involves
+multiple networked database servers.
+proactive and plan
+troubleshoot
+Optimizing CPU
+memory usage 
+scalability
+without slowing down
+***********************************
+literal
+Keywords and reserved words
+***********************
+comparisons
+assignment
+Affected
+locale for day and month names
+indicate
+issue this statement
+configuring for application use 
+character set-relates issues
+*********************
+a number of SQL data types 
+in several categories
+numeric types,
+data and time types
+string(character and byte)types
+spatial types
+the JSON data type
+description of the properties of the types in each category
+storage requirement
+initial
+intentionally
+later
+particular data types
+conventions
+floating-point 
+fixed-point
+M
+digits
+precision
+permissible value
+decimal point(the scale)
+D
+fsp(fractionla seconds precision)
+represents
+that is 
+fractional parts of seconds
+in the range 0 to 6.
+signifies
+omitted
+differs for 
+from the standard SQL default of 6, 
+for compatibility with previous MySQL versions
+Square bracket 
+indicate optional parts of type definitions
+**********************
+at several points
+ORDER BY
+HAVING
+SELECT
+WHERE
+SELECT
+DELETE
+UPDATE
+SET
+literal values
+column values
+NULL
+built-in functions
+stored functions
+user-defined functions
+operators
+are permitted for 
+Routines
+Resolution
+interprets reference to different kinds of functions
+unless otherwise 
+in the documentation for a particular function or operator.
+whitespace 
+parenthesis
+distinguish
+references to tables or columns
+happen to 
+spaces around function arguments are permitted
+--spl-mode=IGNORE_SPACE
+individual client programs
+CLIENT_IGNORE_SPACE 
+mysql_real_connect()
+reserved words
+the sake of brevity
+the output of 
+abbreviated form
+Rather than 
+instead
+syntax
+incorporates
+a transactional data dictionary
+dictionary data 
+metadata files
+nontransactiontal tables
+and storage engine-specific data dictionaries
+main features
+benefits
+usage differences
+and limitations of the data dictionary
+implications
+Benefits
+Simplicity of a centralized data dictionary schema 
+that uniformly sotres dictionary data
+Removal of file-based metadata storage
+Transactional, crash-safe storage of dictionary data
+caching for dictionary objects
+A simpler and improved implementation
+INFORMATION_SCHEMA
+Integration
+Atomic DDL 
+data dictionary-enabled server
+operational 
+compared to 
+Usage Difference
+readiness
+prerequisites
+particularly
+Preparing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
