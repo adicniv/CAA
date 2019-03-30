@@ -74,7 +74,7 @@ incurred due to your access to or use of
 printed for
 printed solely for your own personal use
 is allowed as long as
- is not altered or edited 
+is not altered or edited 
 except if 
 similar to how Oracle disseminates it
 similar to
@@ -176,7 +176,7 @@ multiple servers on a single machine
 consider
 a wide range of  possible topics
 factors
-grnting to
+granting to
 not granting unnecessary privileges to users
 SQL injections
 data corruption
@@ -338,7 +338,7 @@ and limitations of the data dictionary
 implications
 Benefits
 Simplicity of a centralized data dictionary schema 
-that uniformly sotres dictionary data
+that uniformly stores dictionary data
 Removal of file-based metadata storage
 Transactional, crash-safe storage of dictionary data
 caching for dictionary objects
