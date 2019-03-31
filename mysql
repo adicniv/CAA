@@ -354,6 +354,684 @@ readiness
 prerequisites
 particularly
 Preparing
+************
+**********
+InnoDB Storage Engine
+***********
+Alternative Storage Engines
+handle the SQL operations
+general-purpose
+recommends
+specialized
+pluggable storage engine architecture
+enables storage engine to be loaded into
+SHOW ENGINES
+Support 
+or available and currenty set as the default storage engine
+covers use cases for special-purpose 
+does not cover the default InnoDB storage engine or the NDB storage engine
+advanced users
+depend on which edition of MySQL
+commonly asked questions
+transaction-safe(ACID compliant)
+crash-recovery capabilities 
+to protect user data
+row-level(without escalation to coarser granularity locks)
+Oracle-style
+consistent nonlocking reads
+Oracle-style consistent nonlocking reads
+multi-user concurrenty and performance
+reduce I/O
+integrity
+FOREIGN KEY
+referential-integrity constraints
+footprint
+Table-level locking 
+the performance in read/write workloads
+used in read-only or read-mostly workloads
+warehousing configurations
+RAM
+quick lookups of non-critical data
+formely
+known as 
+HEAP
+decreasing
+durable way 
+keep most or all data in memory
+NDBCLUSTER provides fast key-value lookups for huge distributed data sets
+really 
+comma-sparated values
+CSV tables 
+exchange data with scripts and applications that read and write that same format.
+not indexed
+typically InnoDB tables
+during the import or export stage
+compact unindexed tables 
+are intended for storing and retrieving 
+large amounts of seldom-referenced historical,archived,or security 
+audit information
+Blackhole storage engine
+similar to the Unix /dev/mull device
+replication
+DML
+does not keep its own copy of the data
+NDB(also known as NDBCLUSTER)
+particularly suited for 
+highest possible degree of uptime and availability
+Merge
+MySQL DBA or developer 
+logically
+group a series of 
+identical MyISAM tables
+reference them as one object
+Good for VLDB environments
+data warehousing
+Federated
+Offers the ability
+to link separate MySQL servers 
+to create one logical database from many physical servers
+data mart environment
+illustrates how to begin writing new storage engines
+It is primarily of interest to developers.
+stub
+stored in them
+retrieved from them
+are not restricted to using the same storage engine for an entire server or schema
+specify
+mostly InnoDB tables, 
+CSV table
+a spreadsheet
+a few MEMORY tables
+for temporary workspaces
+designed with different use cases in mind
+with clarifying notes following the tables
+Summary
+Feature
+B-tree indexes
+Backup/point-in-time recovery(note1)
+Cluster database support
+Cluster database support
+Clustered indexes
+Compressed data
+Data caches
+Encrypted data
+Foreign key support
+Full-text search indexes
+Geospatial data type support
+Geospatial indexing support
+Hash indexes
+Index caches
+Locking granularity
+MVCC
+Replication support(note 1)
+Storage limits
+T-tree indexes
+Transactions
+Updtae statistics for dat dictionary
+Compressed
+via encryption functions
+data-at-rest
+Support for foreign keys
+FULLTEXT 
+utilizes
+hash indexes
+internally 
+Adaptive Hash Index
+later
+*************************
+Replication
+the master
+be copied to one or more MySQL database servers(the slaves)
+asynchronous
+permanently 
+slaves do not need to be connected permanently  to receive updates from the master
+Advantages of 
+Scale-out
+take place 
+model
+improve
+is dedicated to 
+dramatically increasing read speed
+across an increasing number of slaves
+Data security
+pause process
+corrupting
+the corresponding master data
+Analytics 
+without affecting the performace of the master
+Long-distance data distribution
+a local copy of data 
+for a remote site to use
+permanent
+in such scenarios
+the master's binary log,
+newer method 
+requires to be synchronized
+newer method
+global transaction identifiers(GTDs)
+transactional
+therefore
+greatly
+simplifies
+guarantees 
+consistency
+as long as 
+have also
+applied on the slave
+information on 
+synchronization
+one-way
+act as slaves
+in contrast to
+synchronous
+a characteristic of NDB Cluster
+semisynchronous replication
+in addition to (in addition)
+performed on the master blocks
+returning to the seesion
+acknowledges 
+until
+at least 
+the events for the transaction
+delayed replication
+deliberately
+lags behind the master by at least
+a specified amount of time
+scenarios
+to use
+depends on the presence of data and the engine types you are using
+Statement Based Replication(SBR)
+Row Based Replication(RBR)
+a third variety
+Mixed Based Replication (MBR)
+the different replication formats
+alleviate system failures
+address these issues
+notes and tips on 
+treated
+version compatibility
+potential problems 
+resolution
+by those who are new to MySQL Replication,
+background threads and the rules
+recorded and replicated
+explains
+MySQL Group Replication
+plugin
+elastic
+highly-available
+fault-tolerant replication topologies
+in a single-primary mode
+with automatic primary election
+in multi-primary mode
+even if
+concurrently
+keeps the view of the group consistent and available
+for all servers
+in time
+accordingly
+unexpectedly
+in which case
+the failure detection mechanism
+notifies that view has changed.
+is structured as follows
+how to work wiht a group
+how to secure a group
+in-depth
+*********************
+MySQL Shell
+code editor
+ In addition to
+scripting capabilities
+includes APIs for working with MySQL
+briefly
+use to develop code that interacts with MySQL
+X DevAPI
+relational 
+document data
+using the X Protocol
+documentation on the concepts
+AdminAPI
+high availability and scalability
+advanced MySQL expertise
+free of charge
+at low cost
+**************
+Using as a Document Store
+sometimes referred to as "using NoSQL"
+in a traditional(SQL) way
+not relevant to you
+required a schema to be defined 
+a schema-less, 
+and therefore 
+schema-flexible,storage system for documents
+differs from
+using only the document store model
+combining with
+X Plugin 
+communicate
+a prerequisite for using MySQL as a document store
+as of MySQL 8.0
+X Protocol
+CRUD and SQL operations
+authentication via SASL
+streaming(pipelining)
+extensible
+on teh protocol and the message layer
+Clients compatible with
+X DevAPI
+with a simple yet powerful design
+established 
+industry standard concepts
+get started
+see for
+in-depth
+tutorials on using X DevAPI
+***********************
+covers
+combines
+hightly available clusters of  MySQL server instances
+**********************
+NDB Cluster
+high-availability
+high-redundancy
+adapted for the distributed computing environment
+Recent
+series
+the storage engine(also known as NDBCLUSTER)
+several
+in a cluster
+Developer Milestone Release(DMR)
+incorporates
+GA release
+respectively
+maintained
+are encouraged to
+are no longer supported or maintained
+RPMs
+should work with most Linux distributions
+InnoDB cluster
+a Develper Preview
+General Availability
+is recommended
+in production
+although
+exact levels of support available for on specific combinations of
+identify
+employing a version number
+supplied with MySQL NDB Cluster
+release number
+-DWITH-NDBCLUSTER 
+equivalent 
+adds to the version string
+-cluster
+suffix
+epresents the version of the MySQL Server
+used by this release of the NDB Cluster software. 
+is the same as
+SHOW 
+in the ndb_mgm client
+slightly incompatible
+suboptimal 
+overcome
+datastore
+without allowing for the possibility of changes in schemas,queries,and applications
+
+without -DWITH_NDBCLUSTER_STORAGE_ENGINE
+alias
+-DWITH_NDBCLUSTER
+drop-in
+replacement
+development trees
+are licensed under the GPL
+As with
+CMake
+are subject to
+continues to evolve
+regarding 
+commonly
+about their experiences with NDB Cluster,
+make feeds of 
+Planet
+PlanetMySQ
+*******************************
+Partitioning
+user-defined 
+Table partitioning differs from partitioning as used by window functions. 
+by InnoDB and NDB storage engines
+that not supply native partitioning support
+fails with ER_CHECK_NOT_IMPLEMENTED
+For information about partitioning support offered in MySQL Enterprise Edition binaries
+configuring the build with InnoDB support
+is sufficient to
+Nothing further nees to be done to enable partitioning support by InnoDB(for example, no special entries are required in the my.cnf file)
+It is not possible to
+discusses table maintenance commands for use with partitioned tables.
+PARTITIONS
+INFORMATION_SCHEMA
+against
+known issues with partitioning
+also find the following resources to be useful
+interested in or experimenting with MySQL Partitioning technology
+Architect and Lead Developer
+frequently
+concerning
+kept by those
+working wiht MySQL Partitioning
+to have your own blog added to those covered
+*****************************
+stored database objects
+in terms of
+SQL code that is stored on the server for later execution
+object types
+Stored procedure
+CREATE PROCEDURE 
+invoked
+CALL
+statement
+does not have a return value 
+later inspection
+by the caller
+generate to be returned to the client program 
+result sets
+Stored function
+CREATE FUNCTION 
+much like a built-in function
+invoke it
+in an expression
+evaluation
+Trigger
+CREATE TRIGGER
+is associated with a table
+is activated
+a particular event
+Event
+CREATE EVENT
+invoked 
+according to schedule
+View 
+CREATE VIEW
+that when referenced 
+produces a result set
+acts as 
+a virtual table
+Terminology
+reflects
+hierarchy
+Stored routines include stored procedures and functions
+Stored programs include stored routines,triggers,and events
+Stored objects include stored programs and views
+related to these objects
+and about object processing
+is used to 
+compound statements,loops,conditionals,and declared variables
+Metadata
+changes to
+objects
+referred to by stored programs
+**********************
+INFORMATION_SCHEMA
+database metadata
+access privileges
+Other terms
+that are sometimes use for this information
+data dictionary
+system catalog
+*************************
+MySQL Performance Schema
+at a low level
+characteristics
+focuses primarily on 
+performance data
+differs from INFORMATION_SCHEMA
+monitors 
+server events
+that tekes time and has been instrumented
+so that
+timing information
+can be collected
+An “event” is anything the server does that takes time and has been instrumented so that timing information can be collected
+In general
+could be
+a stage of an SQL statement execution
+such as
+an entire statement
+group of 
+Event collection
+about synchronization calls file and table I/O,
+such as for mutexes
+and so forth 
+Performance Schema events
+are distinct from
+events written to the server's binary log
+data modifications
+Event Scheduler events
+are specific to a given instance
+Performance Schema tables
+are considered 
+local to the server
+binary log
+histories and summaries
+enables to determine
+instrumented activities
+specific threads
+associated with particular objects 
+such as a mutex or file
+collects event data
+instrumentation points
+performance_schema
+dynamically
+through SQL statement
+immediately
+in-memory
+no persistent on-disk storage
+are repopulated
+beginnig at server startup
+discarded
+The types of timers might vary 
+per paltform
+Instruments
+Instrumentation of 
+third-party
+responsibility
+restrictions
+implemented 
+modifying
+instrumentation
+There are no separate threads associated with the Performance Schema, unlike other features such as replication or the Event Scheduler
+minimal impact on server performance
+implementation
+Activating the Performance Shema
+causes
+no changes
+thread scheduling
+query execution palns(as shown by EXPLAN)
+continuously and unobtrusively
+with very little overhead
+unusable
+parser 
+unchanged
+proceeds
+normally
+internally
+choice
+performing processing
+during event collection initially
+during event retrieval later
+priority
+to making collection faster
+ongoing
+whereas
+retrieval
+on demand
+might never happen at all
+execution plans
+other than
+full table scans
+add new instrumentation points
+is versioned
+instrumentation implementation
+previously
+benefits
+developers of third-party plugins
+to stay synchronized with the latest Performance Schema changes
+MySQL sys schema
+a set of objects
+provides convenient access to data collected
+usage instructions
+***********************888
+MySQL sys Schema
+that helps DBAs and developers interpret data
+collected by the Performance Schema
+typical tuning and diagnosis use cases
+summarize into
+perform
+provide formatting services
+by default
+use myslqd with the --initialize or --initialize-insecure
+not desired
+drop
+unneeded
+has no version view
+on the assumption
+absence of this view 
+indicates
+user-created
+in this case
+occur
+*****************
+MySQL Connectors
+connectivity 
+client programs
+low-level
+APIs
+MySQL protocol
+MySQL resources
+Both Connectors and the APIs
+native
+a number of connectors
+Connector/C
+a standlone replacement for the MySQL Client Library(libmysqlclient)
+using the standard Java Database Connectivity(JDBC)API
+Connector/NET
+implements
+a fully functional ADO.NET interface
+ADO.NET aware tools
+MySQL for Visual Studio
+from Visual Studio
+package
+integrates
+directly
+Server Explore
+MySQL database objects
+Connector/ODBC(Open Database Connectivity) 
+platforms
+Python 
+is compliant with the Python DB API version 2.0
+Python modules
+MySQL client libraries
+natively within a C application
+low-level
+libmysqlclient
+through the libmysqlclient client library
+primary
+MySQL command-line clients
+many of the MySQL Connectors and third-party APIS
+implementations
+the C API is where to start
+to help with the process
+Development Utilities
+usage and abilities
+is provided here
+for reference purposes only
+libmysqlclient 
+by implementing a native driver
+different benefits
+complete compatibility with MySQL
+exposed
+as data is copied between the native language,
+components
+Native drivers
+an implementation of the MySQL network protocol entirely
+less copying of data between components
+build and deploy
+deprecated
+PDO mysqlnd(Mysql Native Driver)
+MySQLdb
+scheme
+Myscsh
+SPL
+Tcl(Tool Command Language)
+*********************************************
+Enterprise
+a commercial product
+a fully integrated transaction-safe, ACID-compliant database with full commit
+Atomicity,Consistency,Isolation,Durability
+In addition
+improved
+scalability
+each of these components
+indicate
+detailed information
+MySQL Enterprise Audit
+MySQL Enterprise Thread Pool
+MySQL Enterprise Data Masking and De-Identification
+********************
+a graphical tool
+five main areas of functionality
+parameters
+built-in 
+SQL Editor
+Query Browser
+graphically
+reverse and forward engineer 
+reverse and forward engineer between a schema and a live database
+all aspects
+comprehensive
+Table Editor
+easy-to-use
+facilities
+Privileges
+Routines
+migrate 
+Data Migration
+is available in two editions
+is available free of charge
+generation
+at low cost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
